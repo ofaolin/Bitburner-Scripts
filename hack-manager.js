@@ -363,7 +363,7 @@ export async function main(ns) {
 
 			if (prep) {
 				if (gt > 1) {
-					ns.exec('targeted-grow.js', prep_server, gt, gt, 0, hack_target);
+					ns.exec('targeted-grow.js', prep_server, Math.floor(gt), Math.floor(gt), 0, hack_target);
 					ns.exec('targeted-weaken.js', prep_server, wt, wt, hack_target);
 					await ns.sleep(ns.getWeakenTime(hack_target) + 1000);
 				}
